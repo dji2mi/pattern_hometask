@@ -1,15 +1,16 @@
 class Collection {
     constructor(selector) {
-        this.Collection = element.all(by.xpath(selector));
-    };
+                this.collection = element.all(by.css(selector));
+                    };
     getCount() {
-        return this.Collection.count();
+        return this.collection.count();
     };
     getText() {
-        return this.Collection.getText();
+        return this.collection.getText();
     };
     async clickElementByText(textToClick) {
         const arrayOfElementTexts = await this.collection.getText();
+        console.log(arrayOfElementTexts);
         const elementToClickIndex = arrayOfElementTexts.indexOf(textToClick);
         if (elementToClickIndex === -1) {
             throw new Error(`No element with [${textToClick}] text found!`);

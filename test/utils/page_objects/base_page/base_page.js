@@ -1,8 +1,8 @@
-const Main_Block = require('./main_block.js');
+const MainBlock = require('./main_block.js');
 
 class BasePage {
     constructor() {
-        this.Main_Block = new Main_Block();
+        this.MainBlock = new MainBlock();
     };
     getCurrenUrl() {
         return browser.getCurrentUrl();
